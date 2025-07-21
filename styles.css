@@ -122,9 +122,8 @@ header {
 .features p   { font-size: 18px; color: var(--neutral-dark); }
 
 /* ===== Testimonios Swiper ===== */
-.testimonios-swiper { padding-block: 2rem; }
-/* Ajustes de Swiper para testimonios */
 .testimonios-swiper{
+  padding-block: 2rem;
   position: relative;           /* contenedor para flechas absolutas */
   overflow: visible;            /* deja que las flechas sobresalgan */
   --swiper-navigation-size: 32px;
@@ -185,8 +184,6 @@ footer { background: #eee; padding: 1.5rem; text-align: center; font-size: 14px;
 .post-card h2 { font-size: 22px; margin: 1rem 1rem .5rem; }
 .excerpt   { color: var(--neutral-dark); margin: 0 1rem 1.5rem; }
 .leer-mas  { display: block; font-weight: 600; margin: 0 1rem 1.5rem; }
-.blog-article h1   { font-size: 34px; }
-.blog-article .lead{ font-size: 18px; }
 
 /* ========== MOBILE  ≤ 768px ============================== */
 @media (max-width: 768px) {
