@@ -5,6 +5,12 @@
   display: flex;
   gap: var(--space-4);
 }
+.site-nav a {
+  position: relative;
+  transition: color 0.15s ease;
+  color: var(--text);
+  text-decoration: none;
+}
 .site-nav a:link,
 .site-nav a:visited,
 .site-nav a:hover,
