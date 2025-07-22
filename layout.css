@@ -39,17 +39,23 @@ header {
   font-size: 20px;
 }
 
-/* FEATURES */
+/* FEATURES as cards */
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
   padding: var(--space-7) 0;
   text-align: center;
 }
-.features div {
-  flex: 1 1 30%;
-  margin-bottom: var(--space-5);
+.features > div {
+  background: var(--neutral-light);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: var(--space-5);
+  transition: transform 0.2s;
+}
+.features > div:hover {
+  transform: translateY(-4px);
 }
 .features h2 {
   font-size: 32px;
