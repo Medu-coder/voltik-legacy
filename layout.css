@@ -61,7 +61,10 @@ header {
 }
 
 /* TESTIMONIALS */
-.testimnonials h2 {
+.testimnonials {
+  padding: var(--space-2) 0;
+}
+.testimonials h2 {
   font-size: 32px;
   margin-bottom: var(--space-2);
 }
