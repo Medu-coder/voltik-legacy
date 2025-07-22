@@ -66,6 +66,21 @@ header {
   color: var(--neutral-dark);
 }
 
+/* Valores: tarjetas en una sola línea y fondo diferenciado */
+#valores {
+  background: var(--neutral-light);
+  padding: var(--space-7) var(--space-4);
+}
+#valores.features {
+  grid-template-columns: repeat(4, 1fr); /* siempre 4 columnas */
+}
+@media (max-width: 1023px) {
+  /* en tablet y móvil, volver a grid auto-fit para responsividad */
+  #valores.features {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 /* TESTIMONIALS */
 .testimnonials {
   padding: var(--space-2) 0;
