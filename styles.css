@@ -148,8 +148,8 @@ header {
 .contact     { background: var(--neutral-light); text-align: center; padding: 4rem 1.5rem; }
 .contact h2  { font-size: 40px; margin-bottom: 1rem; }
 
-/* ===== Validación campos ===== */
-.input-field:invalid {
+/* ===== Validación campos cuadno usuario interactúa ===== */
+.input-field:focus:invalid {
   border-color: var(--error);
 }
 .error-msg {
