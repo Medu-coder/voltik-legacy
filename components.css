@@ -89,16 +89,7 @@
   background: var(--neutral-light);  
   max-width: 600px;
   margin: var(--space-5) auto;
-  text-align: center;
-}
-.contact     { 
-  background: var(--neutral-light);
-  text-align: center; 
-  padding: var(--space-7) var(--space-4); 
-}
-.contact h2  { 
-  font-size: 40px;
-  margin-bottom: var(--space-3);
+  text-align: left;
 }
 .contact-form .btn-primary {
   display: block;
