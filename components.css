@@ -200,6 +200,9 @@
   .features {
     gap: var(--space-6);
   }
+  .testimonials {
+    gap: var(--space-6);
+  }
 }
 
 /* Mobile ≤ 768px */
@@ -261,6 +264,14 @@
   }
   .features p {
     font-size: 16px;
+  }
+
+  /* Testimonials adjustments */
+  .testimonials {
+    padding: 3rem 1rem;
+  }
+  .testimonials h2 {
+    font-size: 26px;
   }
 
   /* Contact adjustments */

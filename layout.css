@@ -60,6 +60,12 @@ header {
   color: var(--neutral-dark);
 }
 
+/* TESTIMONIALS */
+.testimnonials h2 {
+  font-size: 32px;
+  margin-bottom: var(--space-2);
+}
+
 /* FOOTER */
 footer {
   background: #eee;
