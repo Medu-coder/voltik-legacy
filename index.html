@@ -174,7 +174,18 @@
           <input type="email" id="email" name="email" class="input-field" required />
 
           <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" class="input-field" />
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            class="input-field"
+            inputmode="tel"
+            autocomplete="tel"
+            <!-- admite móviles y fijos ES con prefijo opcional +34 -->
+            pattern="^(\+?34)?[6-9]\d{8}$"
+            required
+            aria-describedby="telError" />
+          <span id="telError" class="error-msg" aria-live="polite"></span>
 
           <label for="mensaje">¿Qué necesitas?</label>
           <textarea id="mensaje" name="mensaje" rows="4" class="input-field" required></textarea>
@@ -213,6 +224,31 @@
       }
     });
   </script>
+
+<script>
+  /* validación teléfono en tiempo real */
+  const telInput  = document.getElementById('telefono');
+  const telError  = document.getElementById('telError');
+
+  function showTelError(msg) {
+    telError.textContent   = msg;
+    telInput.setCustomValidity(msg);       // impide envío si hay error
+  }
+
+  telInput.addEventListener('input', () => {
+    telError.textContent = '';
+    telInput.setCustomValidity('');
+  });
+
+  telInput.addEventListener('invalid', () => {
+    if (telInput.validity.valueMissing) {
+      showTelError('Introduce tu número de teléfono');
+    } else if (telInput.validity.patternMismatch) {
+      showTelError('Formato no válido. Ej: +34687654321 o 687654321');
+    }
+  });
+</script>
+
   <script>
     // lazy-img.js (inline) – añade loading="lazy" y decoding="async" a imágenes no críticas
     document.addEventListener('DOMContentLoaded', () => {
