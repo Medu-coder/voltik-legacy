@@ -198,6 +198,21 @@ footer { background: #eee; padding: 1.5rem; text-align: center; font-size: 14px;
 .excerpt   { color: var(--neutral-dark); margin: 0 1rem 1.5rem; }
 .leer-mas  { display: block; font-weight: 600; margin: 0 1rem 1.5rem; }
 
+/* ===== Breakpoint XL ≥1280 px ===== */
+/* motivo: usar más ancho en pantallas grandes sin perder legibilidad */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1360px;                               /* hasta 1360 px de ancho */
+    padding-inline: clamp(2rem, 6vw, 4rem);          /* márgenes fluidos */
+  }
+  .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .features {
+    gap: 3rem;                                        /* más aire entre bloques */
+  }
+}
+
 /* ========== MOBILE  ≤ 768px ============================== */
 @media (max-width: 768px) {
   body      { font-size: 90%; }
