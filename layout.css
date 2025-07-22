@@ -68,7 +68,7 @@ header {
 
 /* Valores: encabezado centrado y tarjetas en una sola línea */
 #valores {
-  background: var(--neutral-light);
+  background: var(--secondary-color);
   padding: var(--space-7) var(--space-4);
 }
 #valores.features {
@@ -89,9 +89,11 @@ header {
 
 /* TESTIMONIALS */
 .testimonials {
+  background: var(--neutral-light);
   padding: var(--space-7) 0;
 }
 .testimonials h2 {
+  background: var(--neutral-light);
   font-size: 32px;
   margin-bottom: var(--space-2);
 }
