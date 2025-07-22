@@ -150,11 +150,13 @@ header {
 /* ===== Validación campo teléfono ===== */
 /* motivo: feedback claro sin salir de la paleta */
 .input-field:invalid {
-  border-color: var(--secondary-color);   /* amarillo suave ya definido */
+  border-color: var(--secondary-color);
 }
 .error-msg {
+  display: block;               /* fuerza salto de línea */
   font-size: 0.875rem;
   margin-top: 0.25rem;
+  margin-bottom: 1rem;          /* separa del siguiente label */
   color: var(--secondary-color);
 }
 
