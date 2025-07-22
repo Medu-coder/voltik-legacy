@@ -1,0 +1,69 @@
+/* layout.css */
+
+/* HEADER */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: var(--space-3) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.logo-header {
+  height: 32px;
+}
+
+/* HERO */
+.hero {
+  background: var(--primary-color);
+  padding: var(--space-8) 0;
+}
+.logo-hero {
+  display: block;
+  margin: 0 auto var(--space-4);
+  max-width: 340px;
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: var(--space-3);
+}
+.hero p {
+  font-size: 20px;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: var(--space-7) 0;
+  text-align: center;
+}
+.features div {
+  flex: 1 1 30%;
+  margin-bottom: var(--space-5);
+}
+.features h2 {
+  font-size: 32px;
+  margin-bottom: var(--space-2);
+}
+.features p {
+  font-size: 18px;
+  color: var(--neutral-dark);
+}
+
+/* FOOTER */
+footer {
+  background: #eee;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 14px;
+}

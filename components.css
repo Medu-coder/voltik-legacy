@@ -1,0 +1,259 @@
+/* component.css */
+
+/* Navbar */
+.site-nav {
+  display: flex;
+  gap: var(--space-4);
+}
+.site-nav a {
+  position: relative;
+  transition: color 0.15s ease;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-nav a:link,
+.site-nav a:visited,
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--text);
+  text-decoration: none;
+}
+/* navegación accesible: indicador de foco y activo */
+.site-nav a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.site-nav a.active {
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary,
+.header-cta {
+  background: var(--text);
+  color: var(--neutral-light);
+  border: none;
+  border-radius: 8px;
+  padding: .8rem 2rem;
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Testimonios Swiper */
+.testimonios-swiper {
+  padding-block: var(--space-5);
+  position: relative;
+  overflow: visible;
+  --swiper-navigation-size: 32px;
+  --swiper-navigation-color: var(--secondary-color);
+  --swiper-pagination-color: var(--secondary-color);
+}
+.testimonios-swiper .quote {
+  background: var(--neutral-light);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+  padding: var(--space-5);
+  font-style: italic;
+}
+.swiper-pagination-bullet {
+  background: var(--secondary-color);
+  opacity: .4;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Contacto */
+.contact {
+  background: var(--neutral-light);
+  text-align: center;
+  padding: var(--space-7) var(--space-4);
+}
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: var(--space-3);
+}
+
+/* Phone link */
+.phone-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 600px;
+  margin: var(--space-5) auto;
+  text-align: left;
+}
+.contact-form .btn-primary {
+  display: block;
+  margin: var(--space-3) auto 0;
+}
+
+/* Form inputs */
+.input-field:focus:invalid {
+  border-color: var(--error);
+}
+.error-msg {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: var(--space-3);
+  color: var(--error);
+}
+
+/* Blog Article Headings */
+.blog-article h1 {
+  font-size: clamp(2.5rem, 10vw, 56px);
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+.blog-article .lead {
+  text-align: center;
+  font-size: clamp(1.125rem, 2.5vw, 24px);
+  max-width: 800px;
+  margin: var(--space-3) auto var(--space-5);
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+  padding-bottom: var(--space-7);
+}
+
+/* Post Card */
+.post-card {
+  background: var(--neutral-light);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+  transition: transform .2s;
+}
+.post-card:hover {
+  transform: translateY(-4px);
+}
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.post-card h2 {
+  font-size: 22px;
+  margin: var(--space-3) var(--space-3) var(--space-2);
+}
+.excerpt {
+  color: var(--neutral-dark);
+  margin: 0 var(--space-3) var(--space-4);
+}
+.leer-mas {
+  display: block;
+  font-weight: 600;
+  margin: 0 var(--space-3) var(--space-4);
+}
+
+/* Breakpoint XL ≥1280 px */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1360px;
+    padding-inline: clamp(2rem, 6vw, 4rem);
+  }
+  .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .features {
+    gap: var(--space-6);
+  }
+}
+
+/* Mobile ≤ 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+
+  /* Header adjustments */
+  .logo-header {
+    height: 24px;
+  }
+  .header-content {
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+  .site-nav {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 14px;
+  }
+  .header-cta {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: .7rem 1.5rem;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .logo-hero {
+    max-width: 220px;
+  }
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+
+  /* Features adjustments */
+  .features {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  .features div {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+    padding: 0 .8rem;
+  }
+  .features h2 {
+    font-size: 26px;
+  }
+  .features p {
+    font-size: 16px;
+  }
+
+  /* Contact adjustments */
+  .contact {
+    padding: 3rem 1rem;
+  }
+  .contact h2 {
+    font-size: 32px;
+  }
+
+  /* Compact vertical sections */
+  .section-spaced,
+  .testimonials {
+    padding-block: 3rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
