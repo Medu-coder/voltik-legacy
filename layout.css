@@ -68,7 +68,7 @@ header {
 
 /* Valores: encabezado centrado y tarjetas en una sola línea */
 #valores {
-  background: var(--secondary-color);
+  background: var(--neutral-light);
   padding: var(--space-7) var(--space-4);
 }
 #valores.features {
