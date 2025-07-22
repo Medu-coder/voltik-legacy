@@ -97,6 +97,17 @@
 }
 
 /* Form inputs */
+.input-field {
+  display: block;               /* obliga salto de línea */
+  width: 100%;                  /* ocupa 100% del contenedor */
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+  font-size: 18px;
+}
+.contact-form label {
+  display: block;               /* etiqueta en bloque */
+  margin-bottom: var(--space-1);
+}
 .input-field:focus:invalid {
   border-color: var(--error);
 }
