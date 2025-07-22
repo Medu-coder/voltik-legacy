@@ -4,6 +4,7 @@
   --neutral-light: #FCFCFC;
   --neutral-dark: #4F4F4F;
   --background: #FFFFFF;
+  --error: #C97E7E;
   --text: #1A1A1A;
   --font: "Manrope", sans-serif;
 }
@@ -147,17 +148,16 @@ header {
 .contact     { background: var(--neutral-light); text-align: center; padding: 4rem 1.5rem; }
 .contact h2  { font-size: 40px; margin-bottom: 1rem; }
 
-/* ===== Validación campo teléfono ===== */
-/* motivo: feedback claro sin salir de la paleta */
+/* ===== Validación campos ===== */
 .input-field:invalid {
-  border-color: var(--secondary-color);
+  border-color: var(--error);
 }
 .error-msg {
   display: block;               /* fuerza salto de línea */
   font-size: 0.875rem;
   margin-top: 0.25rem;
   margin-bottom: 1rem;          /* separa del siguiente label */
-  color: var(--neutral-dark);
+  color: var(--error);
 }
 
 /* ========== FOOTER ======================================= */
