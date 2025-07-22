@@ -157,7 +157,7 @@ header {
   font-size: 0.875rem;
   margin-top: 0.25rem;
   margin-bottom: 1rem;          /* separa del siguiente label */
-  color: var(--secondary-color);
+  color: var(--neutral-dark);
 }
 
 /* ========== FOOTER ======================================= */

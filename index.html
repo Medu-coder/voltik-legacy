@@ -171,7 +171,16 @@
           <input type="text" id="nombre" name="nombre" class="input-field" required />
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" class="input-field" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-field"
+            inputmode="email"
+            autocomplete="email"
+            required
+            aria-describedby="emailError" />
+          <span id="emailError" class="error-msg" aria-live="polite"></span>
 
           <label for="telefono">Teléfono</label>
           <!-- admite móviles y fijos ES con prefijo opcional +34 -->
@@ -245,6 +254,30 @@
       showTelError('Introduce tu número de teléfono');
     } else if (telInput.validity.patternMismatch) {
       showTelError('Formato no válido. Ej: +34687654321 o 687654321');
+    }
+  });
+</script>
+
+<script>
+  /* validación email en tiempo real */
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('emailError');
+
+  function showEmailError(msg) {
+    emailError.textContent = msg;
+    emailInput.setCustomValidity(msg);
+  }
+
+  emailInput.addEventListener('input', () => {
+    emailError.textContent = '';
+    emailInput.setCustomValidity('');
+  });
+
+  emailInput.addEventListener('invalid', () => {
+    if (emailInput.validity.valueMissing) {
+      showEmailError('Introduce tu correo electrónico');
+    } else if (emailInput.validity.typeMismatch) {
+      showEmailError('Formato no válido. Ej: usuario@dominio.com');
     }
   });
 </script>
