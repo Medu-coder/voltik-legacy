@@ -212,14 +212,31 @@ title: "Voltik · Instalaciones eléctricas en Córdoba"
   <!-- Swiper JS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    new Swiper('.testimonios-swiper', {
-      loop: true,
-      autoplay: { delay: 5000, disableOnInteraction: false },
-      pagination: { el: '.swiper-pagination', clickable: true },
-      slidesPerView: 1,
-      spaceBetween: 32,          // aire entre tarjetas
-      breakpoints: {             // ≥768 px: muestra 2 a la vez
-        768: { slidesPerView: 2 }
+    document.addEventListener('DOMContentLoaded', () => {
+      const swiperContainer = document.querySelector('.testimonios-swiper');
+      function initSwiper() {
+        new Swiper('.testimonios-swiper', {
+          loop: true,
+          autoplay: { delay: 5000, disableOnInteraction: false },
+          pagination: { el: '.swiper-pagination', clickable: true },
+          slidesPerView: 1,
+          spaceBetween: 32,
+          breakpoints: { 768: { slidesPerView: 2 } }
+        });
+        swiperContainer.classList.add('animate-in');
+      }
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              initSwiper();
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(swiperContainer);
+      } else {
+        initSwiper();
       }
     });
   </script>
