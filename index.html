@@ -7,7 +7,12 @@
   <link rel="preload" as="image" href="/assets/voltik-logo-web.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet"></noscript>
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
   <!-- Fallback ICO -->
@@ -171,6 +176,7 @@
           <input type="text" id="nombre" name="nombre" class="input-field" required />
 
           <label for="email">Email</label>
+          <!-- admite mails usuario@domunio.es/com...-->
           <input
             type="email"
             id="email"
@@ -178,9 +184,9 @@
             class="input-field"
             inputmode="email"
             autocomplete="email"
+            pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(es|com|org|net|info)$"
             required
-            aria-describedby="emailError"
-            pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(es|com|org|net|info)$" />
+            aria-describedby="emailError" />
           <span id="emailError" class="error-msg" aria-live="polite"></span>
 
           <label for="telefono">Teléfono</label>
