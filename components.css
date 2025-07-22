@@ -5,12 +5,6 @@
   display: flex;
   gap: var(--space-4);
 }
-.site-nav a {
-  position: relative;
-  transition: color 0.15s ease;
-  color: var(--text);
-  text-decoration: none;
-}
 .site-nav a:link,
 .site-nav a:visited,
 .site-nav a:hover,
@@ -18,13 +12,19 @@
   color: var(--text);
   text-decoration: none;
 }
-/* navegación accesible: indicador de foco y activo */
+.site-nav a.active,
 .site-nav a:focus-visible {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  color: var(--text); /* ya definido en palette */
 }
-.site-nav a.active {
-  font-weight: 600;
+.site-nav a.active::after,
+.site-nav a:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -4px; /* distancia subrayado */
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
 }
 
 /* Buttons */
@@ -86,9 +86,19 @@
 
 /* Contact form */
 .contact-form {
+  background: var(--neutral-light);  
   max-width: 600px;
   margin: var(--space-5) auto;
-  text-align: left;
+  text-align: center;
+}
+.contact     { 
+  background: var(--neutral-light);
+  text-align: center; 
+  padding: var(--space-7) var(--space-4); 
+}
+.contact h2  { 
+  font-size: 40px;
+  margin-bottom: var(--space-3);
 }
 .contact-form .btn-primary {
   display: block;
