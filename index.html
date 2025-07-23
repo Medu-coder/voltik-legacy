@@ -5,6 +5,12 @@ title: "Voltik · Instalaciones eléctricas en Córdoba"
 <html lang="es">
 <head>
     {% include head.html %}
+    <style>
+      /* Forzar posición relativa en el contenedor de testimnonios Swiper */
+      .testimonios-swiper {
+        position: relative !important;
+      }
+    </style>
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -223,7 +229,7 @@ title: "Voltik · Instalaciones eléctricas en Córdoba"
         new Swiper('.testimonios-swiper', {
           loop: true,
           autoplay: { delay: 5000, disableOnInteraction: false },
-          pagination: { el: '.swiper-pagination', clickable: true, position: 'relative' },
+          pagination: { el: '.swiper-pagination', clickable: true, },
           slidesPerView: 1,
           spaceBetween: 32,
           breakpoints: { 768: { slidesPerView: 2 } },
