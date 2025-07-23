@@ -49,8 +49,8 @@ header {
   font-size: 32px;
 }
 .problem-agitate-solution p {
-  font-size: 20px;
-  padding: var(--space-0) 0;
+  max-width: 800px;
+  margin: var(--space-0) auto;
 }
 
 /* FEATURES as cards */
