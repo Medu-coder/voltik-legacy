@@ -45,13 +45,14 @@ header {
 }
 
 /* PROBLEM / AGITATE / SOLUTION */
+.problem-agitate-solution {
+  padding: var(--space-6) 0;
+}
 .problem-agitate-solution h2 {
   font-size: 32px;
 }
 .problem-agitate-solution p {
-  max-width: 800px;
   font-size: 20px;
-  margin: var(--space-0);
 }
 
 /* FEATURES as cards */
