@@ -223,11 +223,10 @@ title: "Voltik · Instalaciones eléctricas en Córdoba"
         new Swiper('.testimonios-swiper', {
           loop: true,
           autoplay: { delay: 5000, disableOnInteraction: false },
-          pagination: { el: '.swiper-pagination', clickable: true },
+          pagination: { el: '.swiper-pagination', clickable: true, position: 'relative' },
           slidesPerView: 1,
           spaceBetween: 32,
           breakpoints: { 768: { slidesPerView: 2 } },
-          position: 'relative'
         });
         swiperContainer.classList.add('animate-in');
       }
