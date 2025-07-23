@@ -51,7 +51,7 @@ header {
 .problem-agitate-solution p {
   max-width: 800px;
   font-size: 20px;
-  padding: var(--space-0);
+  margin: var(--space-0);
 }
 
 /* FEATURES as cards */
