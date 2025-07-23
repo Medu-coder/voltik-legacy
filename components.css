@@ -83,17 +83,6 @@
   transform: translateY(0);
 }
 
-/* Contacto */
-.contact {
-  background: var(--neutral-light);
-  text-align: center;
-  padding: var(--space-7) var(--space-4);
-}
-.contact h2 {
-  font-size: 40px;
-  margin-bottom: var(--space-3);
-}
-
 /* Phone link */
 .phone-link {
   font-weight: 600;
@@ -103,7 +92,7 @@
 
 /* Contact form */
 .contact-form {
-  background: var(--neutral-light);  
+  background: var(--primary-color);  
   max-width: 600px;
   margin: var(--space-5) auto;
   text-align: left;
@@ -115,6 +104,7 @@
 
 /* Form inputs */
 .input-field {
+  background: var(--neutral-light);
   display: block;               /* obliga salto de línea */
   width: 100%;                  /* ocupa 100% del contenedor */
   padding: var(--space-2);
