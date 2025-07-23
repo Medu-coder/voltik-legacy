@@ -49,4 +49,4 @@ body {
 /* Utilidades */
 .centered       { text-align: center; }
 .section-spaced { padding-block: var(--space-7); }
-.lead           { max-width: 700px; margin: var(--space-3) auto var(--space-5); }
+.lead           { max-width: 800px; margin: var(--space-3) auto var(--space-5); }
