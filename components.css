@@ -74,6 +74,7 @@
 
 /* Espaciado para bullets de paginación de Swiper */
 .swiper-pagination {
+  position: relative !important;  /* override absolute positioning from Swiper */
   display: flex;
   justify-content: center;
   gap: var(--space-2);                        /* separación horizontal entre bullets */
