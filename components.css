@@ -77,7 +77,7 @@
   display: flex;
   justify-content: center;
   gap: var(--space-2);                        /* separación horizontal entre bullets */
-  margin: var(--space-4) 0 var(--space-7);     /* espacio arriba y abajo */
+  margin: var(--space-4) 0 var(--space-4);     /* espacio arriba y abajo */
 }
 
 /* Animación testimonios on-scroll */
